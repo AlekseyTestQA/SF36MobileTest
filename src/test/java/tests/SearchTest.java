@@ -21,6 +21,8 @@ public class SearchTest extends CoreTestCase {
     // 6. Выбрать по тексту Island of indonesia - //*[./*[contains(@text,"Island of Indonesia")]]
     //org.wikipedia:id/search_src_text
 
+    //Задание 36.1 выполнение пункта "2"
+    
     @Test
     public void testSearch() {
         MainPageObject mainPO = new MainPageObject(this.driver);
