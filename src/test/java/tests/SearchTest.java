@@ -21,8 +21,9 @@ public class SearchTest extends CoreTestCase {
     // 6. Выбрать по тексту Island of indonesia - //*[./*[contains(@text,"Island of Indonesia")]]
     //org.wikipedia:id/search_src_text
 
-    //Задание 36.1 выполнение пункта "2"
-    
+    //Задание 36.1 выполнение пункта "3"
+    //
+
     @Test
     public void testSearch() {
         MainPageObject mainPO = new MainPageObject(this.driver);
@@ -38,11 +39,11 @@ public class SearchTest extends CoreTestCase {
                 "id:org.wikipedia:id/search_src_text",
                 "Cannot find search input "
         );
-        searchInput.sendKeys("Java");
+        searchInput.sendKeys("wfewfewfwegweg");
 
         WebElement expectedResult = mainPO.waitForElementPresent(
-                "xpath://*[./*[contains(@text,'Island of Indonesia')]]",
-                "Cannot find result 'Island of Indonesia on 'Java' search'"
+                "xpath://*[./*[@text='No results found']]",
+                "Cannot find result 'on 'wfewfewfwegweg' search'"
         );
 
         expectedResult.click();
